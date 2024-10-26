@@ -1,5 +1,5 @@
 <h1>Create a new Account</h1>
-<form class="ui form" [formGroup]="signupForm">
+<form (ngSubmit)="onSubmit()" class="ui form" [formGroup]="signupForm">
     
     <app-input
      inputType="text" 
@@ -29,6 +29,12 @@
     >
         <p *ngIf="signupForm.errors.passwordDontMatch">
             Password must match
+        </p>
+        <p *ngIf="signupForm.errors.noConnection">
+            No Internet Connection, Failed to sign up
+        </p>
+        <p *ngIf="signupForm.errors.unknownError">
+            Failed to sign up
         </p>
     </div>
   
