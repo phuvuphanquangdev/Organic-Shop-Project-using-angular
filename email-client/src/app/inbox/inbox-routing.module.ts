@@ -1,3 +1,4 @@
+import { EmailResolverService } from './email-resolver.service';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { EmailShowComponent } from './email-show/email-show.component';
 import { HomeComponent } from './home/home.component';
@@ -10,7 +11,13 @@ const routes: Routes = [
     path: '', 
     component: HomeComponent,
     children: [
-      { path: ':id', component: EmailShowComponent},
+      { 
+        path: ':id', 
+        component: EmailShowComponent,
+        resolve: {
+          email: EmailResolverService
+        }
+      },
       { path: '', component: PlaceholderComponent}
     ]
   }
