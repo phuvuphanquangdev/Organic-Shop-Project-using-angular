@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forecast.component.css']
 })
 export class ForecastComponent implements OnInit {
+  forecasts = [];
 
   constructor(private forecastService: ForecaseService) {
     forecastService.getForecast()
-      .subscribe((cords) => {
-        console.log(cords);
+      .subscribe((forecasts) => {
+        this.forecasts = forecasts;
       });
    }
 

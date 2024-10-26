@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { map, switchMap, pluck, mergeMap, filter } from 'rxjs/operators';
+import { map, switchMap, pluck, mergeMap, filter, toArray } from 'rxjs/operators';
 import { HttpParams, HttpClient} from '@angular/common/http';
 
 interface OpenWeatherResponse {
@@ -27,7 +27,7 @@ export class ForecaseService {
           return new HttpParams()
             .set('lat', String(coords.latitude))
             .set('lon', String(coords.longitude))
-            .set('units', 'matric')
+            .set('units', 'metric')
             .set('appid', 'c9b777edf3fe4d2e0c549ec4f1bb3ff9');
         }),
         switchMap(
@@ -35,7 +35,14 @@ export class ForecaseService {
         ),
         pluck('list'),
         mergeMap(value => of(...value)),
-        filter((value, index) => index % 8 === 0)
+        filter((value, index) => index % 8 === 0),
+        map(value => {
+          return {
+            dateString: value.dt_text,
+            temp: value.main.temp
+          };
+        }),
+        toArray()
       );
   }
 
