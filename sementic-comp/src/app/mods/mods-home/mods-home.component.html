@@ -1,0 +1,9 @@
+<app-header>Modal</app-header>
+<button (click)="toggleModal()">Show Modal</button>
+<app-modal (closeModal)="toggleModal()" *ngIf="modalOpen">
+    <div modalTitle>Reuseable Title</div>
+    <p>This is a Reuseable Modal.....</p>
+    <div modalFooter>
+        <button (click)="toggleModal()" class="ui button">Close Me</button>
+    </div>
+</app-modal>
