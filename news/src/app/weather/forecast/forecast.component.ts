@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ForecastComponent implements OnInit {
 
   constructor(private forecastService: ForecaseService) {
-    forecastService.getCurrentLocation()
+    forecastService.getForecast()
       .subscribe((cords) => {
         console.log(cords);
       });
