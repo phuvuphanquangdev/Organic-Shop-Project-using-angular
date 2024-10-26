@@ -1,0 +1,50 @@
+[debug] [2019-12-02T19:32:08.382Z] ----------------------------------------------------------------------
+[debug] [2019-12-02T19:32:08.385Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-02T19:32:08.385Z] CLI Version:   7.8.1
+[debug] [2019-12-02T19:32:08.385Z] Platform:      win32
+[debug] [2019-12-02T19:32:08.385Z] Node Version:  v10.15.3
+[debug] [2019-12-02T19:32:08.387Z] Time:          Tue Dec 03 2019 01:32:08 GMT+0600 (Bangladesh Standard Time)
+[debug] [2019-12-02T19:32:08.387Z] ----------------------------------------------------------------------
+[debug] [2019-12-02T19:32:08.387Z] 
+[debug] [2019-12-02T19:32:08.408Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-02T19:32:08.410Z] > authorizing via signed-in user
+[debug] [2019-12-02T19:32:08.410Z] [iam] checking project organic-shop-66e61 for permissions ["firebase.projects.get"]
+[debug] [2019-12-02T19:32:08.414Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/organic-shop-66e61:testIamPermissions  
+
+[debug] [2019-12-02T19:32:10.105Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-02T19:32:10.111Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/organic-shop-66e61  
+ 
+[debug] [2019-12-02T19:32:10.706Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Lenovo\source\repos\Angular Project\Organic-Shop'...
+[info] 
+[debug] [2019-12-02T19:32:10.721Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/organic-shop-66e61/webApps/-/config  
+ 
+[debug] [2019-12-02T19:32:11.933Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-12-02T19:35:02.700Z] ----------------------------------------------------------------------
+[debug] [2019-12-02T19:35:02.702Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-02T19:35:02.703Z] CLI Version:   7.8.1
+[debug] [2019-12-02T19:35:02.703Z] Platform:      win32
+[debug] [2019-12-02T19:35:02.703Z] Node Version:  v10.15.3
+[debug] [2019-12-02T19:35:02.704Z] Time:          Tue Dec 03 2019 01:35:02 GMT+0600 (Bangladesh Standard Time)
+[debug] [2019-12-02T19:35:02.704Z] ----------------------------------------------------------------------
+[debug] [2019-12-02T19:35:02.704Z] 
+[debug] [2019-12-02T19:35:02.714Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-02T19:35:02.715Z] > authorizing via signed-in user
+[debug] [2019-12-02T19:35:02.715Z] [iam] checking project organic-shop-66e61 for permissions ["firebase.projects.get"]
+[debug] [2019-12-02T19:35:02.717Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/organic-shop-66e61:testIamPermissions  
+
+[debug] [2019-12-02T19:35:04.182Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-02T19:35:04.188Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/organic-shop-66e61  
+ 
+[debug] [2019-12-02T19:35:04.783Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Lenovo\source\repos\Angular Project\Organic-Shop'...
+[info] 
+[debug] [2019-12-02T19:35:04.794Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/organic-shop-66e61/webApps/-/config  
+ 
+[debug] [2019-12-02T19:35:06.012Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] +  hosting: Local server: http://localhost:5000

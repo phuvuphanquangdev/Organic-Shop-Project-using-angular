@@ -11,8 +11,8 @@ export const environment = {
     projectId: "organic-shop-66e61",
     storageBucket: "organic-shop-66e61.appspot.com",
     messagingSenderId: "360244213890",
-    appId: "1:360244213890:web:5d6a6165683e0dff22dc9b",
-    measurementId: "G-Y316853YLC"
+    appId: "1:360244213890:web:165e1c2b93b40a3d22dc9b",
+    measurementId: "G-35VQYQ134N"
   }
 };
 

@@ -1,0 +1,45 @@
+
+<br>
+<br>
+<div class="container">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title is-2 has-text-centered">Typing Challenge</h1>
+      <br>
+      <p class="has-text-centered p-font">
+        <span [class]="correctColor(letter, inputText[i])"
+         *ngFor="let letter of randomText.split(''); let i=index;"
+         >{{ letter }}</span>
+      </p>
+      <br>
+      <br>
+
+      <div class="field">
+        <input #input_value type="text" class="input" (input)="onChangeInput($event.target.value)">
+      </div>
+
+      <div class="level">
+        <button (click)="onClickNext()" class="button is-info is-rounded">Next</button>
+        <button (click)="onClickDone()" class="button is-success is-rounded">Done</button>
+      </div>
+      <br>
+      
+      <div class="has-text-weight-medium is-family-code has-text-centered">
+        <p>Correct: <span>{{ correct }}</span></p>
+        <p>Incorrect: <span>{{ incorrect }}</span></p>
+        <p>Acuricy: <span>{{ acuricy }}%</span></p>
+        <p>Overall Acuricy: <span>{{ overallAcuricy }}%</span></p>
+      </div>
+      
+      <br>
+      <br>
+      <div *ngIf="finishMsg" class="box has-text-centered">
+        <h3 class="title is-3"><span *ngIf="acuricy>79 && acuricy<90">Good Job!</span><span *ngIf="acuricy>70 && acuricy<80">Not Bad.</span><span *ngIf="acuricy<70">You can do better.</span><span *ngIf="acuricy>89">Well Done!!</span></h3>
+      </div>
+
+      <br>
+    </div>
+  </div>
+</div>
+
+
