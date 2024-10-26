@@ -1,0 +1,12 @@
+
+
+<div class="text-center">
+    <button (click)="getPhoto()" class="btn btn-info btn-lg mx-auto my-4">New Photo</button>
+</div>
+
+<div class="polaroid mx-auto">
+    <img [src]="photoUrl" style="width:100%">
+    <div class="container">
+    <p>{{ description }}</p>
+    </div>
+</div>
