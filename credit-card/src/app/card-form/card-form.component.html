@@ -1,9 +1,41 @@
-<form [formGroup]="cardForm">
-    <app-input [control]="cardForm.controls.name"></app-input>
-</form>
 
-<hr>
+<h1 class="title has-text-centered">Credit Card Form</h1>
 
-<div>Form Content: {{ cardForm.value | json}}</div>
-<div>Form Valid: {{ cardForm.valid }}</div>
-<div>Errors: {{ cardForm.controls.name.errors | json}}</div>
+<div class="columns">
+    <div class="column">
+        <app-card
+            [name]="cardForm.value.name"
+            [cardNumber]="cardForm.value.cardNumber"
+            [expiration]="cardForm.value.expiration"    
+        >
+        </app-card>
+    </div>
+    <div class="column">
+        <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+    
+            <app-input label="Name" [control]="cardForm.controls.name"></app-input>
+        
+            <app-input label="Card Number" [control]="cardForm.controls.cardNumber"></app-input>
+        
+            <div class="columns">
+                <div class="column">
+                    <app-input label="Expiration" [control]="cardForm.controls.expiration"></app-input>
+                </div>
+                <div class="column">
+                    <app-input label="Security Code" [control]="cardForm.controls.securityCode"></app-input>
+                </div>
+            </div>
+        
+            <div class="buttons">
+                <button [disabled]="cardForm.invalid" type="submit" class="button is-primary">Submit</button>
+            <button class="button is-warning" type="button" (click)="onReset()">Reset</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+
+
+
+
